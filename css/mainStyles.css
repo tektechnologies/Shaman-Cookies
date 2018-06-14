@@ -99,7 +99,8 @@ p {
 	text-align: center;
  }
  img{
-	 float:right; clear: right; }
+	 float:right; clear: right; 
+	height: 300px; width:300px;}
 
  .dataView {
 float: left;
