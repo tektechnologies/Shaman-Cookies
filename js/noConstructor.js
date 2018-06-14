@@ -1,118 +1,74 @@
-"use srict";
+'use srict';
 
-var iowaCity={
-  minCustomers: 23,
-  maxCustomers: 65,
-  averageSales: 6.3,
-  hourlyArray:[],
-  numOfCust: function(){
+
+function ShamanCookieStores( minCustomers, maxCustomers, averageSales, locationName){
+  if (typeof this === 'undefined') { console.error('Cookie is a constructor! Use new!'); return; }
+  if (arguments.length < 4) { console.error('minCustomers, maxCustomers, averageSales, name are required!'); }
+
+  this.minCustomers = minCustomers;
+  this.maxCustomers = maxCustomers;
+  this.averageSales = averageSales;
+  this.locationName = locationName;
+  this.cookiesSold = [];
+
+  ShamanCookieStores.prototype.numOfCustPerHour = function() {
     return Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
-  },
-  cookiesPurchased: function(){
-    for(var i=0; i<15; i++){
-      this.hourlyArray[i]= Math.floor(this.numOfCust() * this.averageSales);
+  };
+  ShamanCookieStores.prototype.numOfCookiesPerHour = function() {
+    for(var i=0; i< hours.length; i++){
+      this.cookiesSold[i]= Math.floor(this.numOfCustPerHour() * this.averageSales);
     }
-  },
-};
+  };
+  ShamanCookieStores.prototype.toString = function() {
+    return this.name + '( ' + this.minCustomers + ' ' + this.maxCustomers + ' )';
+  };
+}
 
-var cedarRapids={
-  minCustomers: 3,
-  maxCustomers: 24,
-  averageSales: 1.2,
-  hourlyArray:[],
-  numOfCust: function(){
-    return Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
-  },
-  cookiesPurchased: function(){
-    for(var i=0; i<15; i++){
-      this.hourlyArray[i]= Math.floor(this.numOfCust() * this.averageSales);
-    }
-  },
-};
+var iowaCity = new ShamanCookieStores(23,65,6.3,'Iowa City');
+var cedarRapids = new ShamanCookieStores(3,24,1.2,'Cedar Rapids');
+var boulderColo = new ShamanCookieStores(11,38,3.7,'Boulder Colo.');
+var eugeneOregon = new ShamanCookieStores(20,38,2.3,'Eugene Oregon');
+var oxnardCali = new ShamanCookieStores(2, 16, 4.6,'Point Break');
+var hours=['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
-var boulderColo={
-  minCustomers: 11,
-  maxCustomers: 38,
-  averageSales: 3.7,
-  hourlyArray:[],
-  numOfCust: function(){
-    return Math.ceil(Math.random()*(this.maxCustomers - this.minCustomers) + this.minCustomers);
-  },
-  cookiesPurchased: function(){
-    for(var i=0; i<15; i++){
-      this.hourlyArray[i]= Math.floor(this.numOfCust() * this.averageSales);
-    }
-  },
-};
 
-var eugeneOregon={
-  minCustomers: 20,
-  maxCustomers: 38,
-  averageSales: 2.3,
-  hourlyArray:[],
-  numOfCust: function(){
-    return Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
-  },
-  cookiesPurchased: function(){
-    for(var i=0; i<15; i++){
-      this.hourlyArray[i]= Math.floor(this.numOfCust() * this.averageSales);
-    }
-  },
-};
-
-var oxnardCali={
-  minCustomers: 2,
-  maxCustomers: 16,
-  averageSales: 4.6,
-  hourlyArray:[],
-  numOfCust: function(){
-    return Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
-  },
-  cookiesPurchased: function(){
-    for(var i=0; i<15; i++){
-      this.hourlyArray[i]= Math.floor(this.numOfCust() * this.averageSales);
-    }
-  },
-};
-
-var hours=["6am","7am","8am","9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm"];
-
-function displayForecastedLocationData(location,id){
+function displayForecastedLocationData(location){
   // Run our cookies-per-hour simulation!
-  location.cookiesPurchased();
-
-  // Find parent <ul> for this location by id
-  var locationlist=document.getElementById(id);
-
+  location.numOfCookiesPerHour();
   // Let's also count total cookies
   var cookieTotal = 0;
+  // Find parent <tbody> for this location by id
+  var tbody = document.querySelector('tbody');
+  var tr = document.createElement('tr');
+  tbody.appendChild(tr);
+  /////////////////////////////////////////////////
+  var tdLocationName = document.createElement('td');
+  tdLocationName.textContent = location.locationName;
+  tr.appendChild(tdLocationName);
+  //////////////////////////////////////////
 
   // For each hour that the store is open...
-  for(var i = 0; i < location.hourlyArray.length; i++){
-    var cookiesForThisHour = location.hourlyArray[i];
+  for(var i = 0; i < hours.length; i++){
+    var cookiesForThisHour = location.cookiesSold[i];
 
     cookieTotal = cookieTotal + cookiesForThisHour;
     console.log({ cookiesForThisHour, cookieTotal });
 
     // Build string to display in the <li>
-    var listString=hours[i] + ': ' + cookiesForThisHour + ' cookies.';
+    // var listString=hours[i] + ': ' + cookiesForThisHour + ' cookies.';
 
     // Create <li> with that string, and add to <ul>
-    var li=document.createElement('li');
-    li.textContent=listString;
-    locationlist.appendChild(li);
+    var cookieHourlyData = document.createElement('td');
+    cookieHourlyData.textContent = cookiesForThisHour;
+    tr.appendChild(cookieHourlyData);
   }
-
-  var totalLI = document.createElement('li');
-  locationlist.appendChild(totalLI);
-
-  var totalStrong = document.createElement('strong');
-  totalStrong.textContent = 'Total: ' + cookieTotal;
-  totalLI.appendChild(totalStrong);
+  var cookieTotals = document.createElement('td');
+  cookieTotals.textContent = cookieTotal;
+  tr.appendChild(cookieTotals);
 }
 //create list items, create the objects identify html ul elements by id.
-displayForecastedLocationData(iowaCity,"hawkeyes");
-displayForecastedLocationData(cedarRapids,"kernels");
-displayForecastedLocationData(boulderColo,"buffalos");
-displayForecastedLocationData(eugeneOregon,"glassArtist");
-displayForecastedLocationData(oxnardCali,"pointBreak");
+displayForecastedLocationData(iowaCity,'hawkeyes');
+displayForecastedLocationData(cedarRapids,'kernels');
+displayForecastedLocationData(boulderColo,'buffalos');
+displayForecastedLocationData(eugeneOregon,'glassArtist');
+displayForecastedLocationData(oxnardCali,'pointBreak');
