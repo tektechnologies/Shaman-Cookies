@@ -32,7 +32,7 @@ var oxnardCali = new ShamanCookieStores(2, 16, 4.6,'Point Break');
 var hours=['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
 
-function displayForecastedLocationData(location, id){
+function displayForecastedLocationData(location){
   // Run our cookies-per-hour simulation!
   location.numOfCookiesPerHour();
   // Let's also count total cookies
