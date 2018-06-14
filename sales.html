@@ -24,45 +24,79 @@
                  <h1>Welcome</h1>
                  <!--http://www.bakemag.com/Trends/Bread-Winners/Predict-the-future.aspx?cck=1-->
                  <p>Sales forecasting has the ability to improve several areas of operation in the retail bakery. By creating a sales forecast, bakeries can predict cash flow, monitor prices and control operating costs with a higher degree of confidence and accuracy.</p>
-                 <form>
-                        
-
-
-                        
+                 <form>  
                         <fieldset>
                           <table>
-                            <tr>
-                              <td><label for="emailInput">Email</label></td>
-                              <td><input type="email" id="emailInput" placeholder="you@example.com" /></td>
+                            <tr>  
+                              <td><label>Minimum Customers</label></td>
+                              <td><input type="number" id="minCustomers"  /></td>
                             </tr>
                             <tr>
-                              <td>Phone</td>
-                              <td><input type="tel" placeholder="(xxx) xxx-xxxx" /></td>
+                              <td><label>Maximum Customers</label></td>
+                              <td><input type="number" id="maxCustomers"  /></td>
                             </tr>
                             <tr>
-                              <td>May we contact?</td>
-                              <td>
-                                <label><input type="radio" name="may-contact" /> Yes</label>
-                                <label><input type="radio" name="may-contact" /> No</label>
-                              </td>
+                                <td><label>Average Sales</label></td>
+                                <td><input type="number" id="averageSales"  /></td>
                             </tr>
-                           
                             <tr>
-                              <td>How long have you been a customer?</td>
-                              <td><input name="custYears" type="number" min="5" max="15" step="0.5" placeholder="# of Years" /></td>
+                                <td><label>New Location Name.</label></td>
+                                <td><input type="text" id="locationName"  /></td>
                             </tr>
+
+
+
+                          
                             <tr>
                              <td><button>Cancel</button></td> 
                              <td>
-                               <input type="submit" value="Save Preferences" />
+                                <button><input type="submit" value="Add New Store" /></button>
                                
                              </td>
                             </tr>
                           </table>
                         </fieldset>
                   </form>
-                   
-           
+                  <div class="dataView">
+                    <table>
+                      <thead>
+                          <tr>
+                              <th></th>
+                              <th>6am</th>
+                              <th>7am</th>
+                              <th>8am</th>
+                              <th>9am</th>
+                              <th>10am</th>
+                              <th>11am</th>
+                              <th>12pm</th>
+                              <th>1pm</th>
+                              <th>2pm</th>
+                              <th>3pm</th>
+                              <th>4pm</th>
+                              <th>5pm</th>
+                              <th>6pm</th>
+                              <th>7pm</th>
+                              <th>8pm</th>
+                              <th>Sales Total</th>
+                            </tr>
+                        </thead> 
+                        <!--javascript will populate the data.-->
+                        <tbody id="storeData">
+                              
+  
+                        </tbody>  
+                        <tfoot id="tableFooter">
+  
+                        </tfoot>
+                    </table>
+                  </div>
+                    <section>
+                      <ul id="allStores">
+
+                      </ul>
+                    </section>
+
+
                 <section class="footer">
                  <footer id="footer-content">
                         <p>©Copyright 2018 • All Rights Reserved • Shaman Cookies</p>
