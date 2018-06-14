@@ -108,3 +108,13 @@ border: dashed 2px #fff;
 border-radius: 10px;
 margin-left: 10px;
  }
+
+ table{
+	 border: Solid 3px #fff;
+	 width:800;
+	 height:250px;
+	 border-radius: 10px;
+ }
+ thead{border:Solid 4px black;}
+
+ td{ border:Solid 3px #fff;}
