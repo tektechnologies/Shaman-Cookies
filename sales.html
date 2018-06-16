@@ -19,6 +19,11 @@
                  <p>Welcome the Shaman Cookies, this part of the site is not customer facing
                     and is meant to be used by SC management to forecast business requirements.
                  </p>
+                 <div class="storeHours">
+                    <h2>Store Hours</h2>
+                    <ul><li>Monday - Friday</li><li>6am - 8pm</li><li>All Locations</li></ul>
+                  </div>
+             </div>
               </div>
               <div id="content">
                  <h1>Welcome</h1>
@@ -37,18 +42,14 @@
                             </tr>
                             <tr>
                                 <td><label>Average Sales</label></td>
-                                <td><input type="number" id="averageSales"  /></td>
+                                <td><input type="number" id="averageSales" step="0.1" /></td>
                             </tr>
                             <tr>
                                 <td><label>New Location Name.</label></td>
                                 <td><input type="text" id="locationName"  /></td>
                             </tr>
-
-
-
-                          
                             <tr>
-                             <td><button>Cancel</button></td> 
+                             <td><button type="reset" value="Reset">Cancel</button></td> 
                              <td>
                                 <button><input type="submit" value="Add New Store" /></button>
                                
@@ -90,7 +91,8 @@
                         </tfoot>
                     </table>
                   </div>
-                    <section>
+                    <section class="allStores">
+                      <h2>New Stores Added</h2>
                       <ul id="allStores">
 
                       </ul>
