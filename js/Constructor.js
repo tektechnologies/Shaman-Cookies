@@ -1,5 +1,5 @@
 'use srict';
-
+//constructor for new store.
 function NewStore(minCustomers, maxCustomers, averageSales, locationName) {
   this.minCustomers = minCustomers;
   this.maxCustomers = maxCustomers;
@@ -23,14 +23,15 @@ NewStore.renderAll = function() {
   }
 };
 
+//Prototype  to string that returns location name and average sales
 NewStore.prototype.toString = function () {
   return this.locationName + ' (' + this.averageSales + ' Average Sales)';
 };
-
+//prototype to get allStores by element ID.
 NewStore.prototype.render = function() {
   var allStoresUL = document.getElementById('allStores');
 
-  /*
+  /* This is the same function as the one below.
   var li = document.createElement('li');
   li.textContent = this.toString();
   customersUL.appendChild(li);
