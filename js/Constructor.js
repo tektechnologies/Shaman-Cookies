@@ -1,22 +1,24 @@
 'use srict';
+
 //constructor for new store.
 function NewStore(minCustomers, maxCustomers, averageSales, locationName) {
   this.minCustomers = minCustomers;
   this.maxCustomers = maxCustomers;
   this.averageSales = averageSales;
   this.locationName = locationName;
+
   // Add this new store to the catalog
   NewStore.all.push(this);
-  console.log('All Stores', NewStore.all);
 }
 
 // Add store to list of all stores.
 NewStore.all = [];
+
 NewStore.renderAll = function() {
   // First, empty out the existing customer list
   var storesUL = document.getElementById('allStores');
   storesUL.innerHTML = '';
-  console.log('Store list cleared!');
+
   // Then, render each Store
   for (var i = 0; i < NewStore.all.length; i++) {
     NewStore.all[i].render();
@@ -45,9 +47,6 @@ function appendNewElement(tagName, textContent, parent) {
   parent.appendChild(el);
 }
 
-
-
-
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -65,32 +64,8 @@ function handleSubmit(event) {
 
   NewStore.renderAll();
 }
-
 var form = document.querySelector('form');
 form.addEventListener('submit', handleSubmit);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -153,6 +128,8 @@ function displayForecastedLocationData(location){
   var cookieTotals = document.createElement('td');
   cookieTotals.textContent = cookieTotal;
   tr.appendChild(cookieTotals);
+
+
 }
 //create list items, create the objects identify html ul elements by id.
 displayForecastedLocationData(iowaCity);
