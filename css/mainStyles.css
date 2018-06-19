@@ -16,7 +16,7 @@ list-style: none;
 	padding:50px 25px;
 	
 	margin-left:265px;
-	background: #04CFE1 url("/images/salmon.png") no-repeat fixed center;
+	background: #04CFE1 url("../images/salmon.png") no-repeat fixed center;
 	
 }
 #content h1 {
