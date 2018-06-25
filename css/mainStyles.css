@@ -1,103 +1,139 @@
+
+
 body {
-	background-color:#04CFE1;
+	background-color: #04CFE1;
 }
+
 #wrapper {
-	margin:0 auto;
-	width:100%;
-	
+	margin: 0 auto;
+	width: 100%;
 }
-ul {margin-bottom: 15px;}
-li {font-size: 1.5em;
-list-style: none;
+
+ul {
+	margin-bottom: 15px;
 }
+
+li {
+	font-size: 1.5em;
+	list-style: none;
+}
+
 #content {
-	float:left;
-	width:1000px;
-	padding:50px 25px;
-	
-	margin-left:265px;
+	float: left;
+	width: 1000px;
+	padding: 50px 25px;
+	margin-left: 265px;
 	background: #04CFE1 url("../images/salmon.png") no-repeat fixed center;
-	
 }
+
 #content h1 {
-	font-size:50px;
+	font-family: 'Monoton', cursive;
+	font-size: 50px;
 	text-shadow: 3px 3px 3px rgba(19, 71, 184, 0.99);
 }
+
 #content p {
-	font-size:18px;
-	text-transform:uppercase;
+	font-size: 18px;
+	text-transform: uppercase;
 }
+
 h1 {
-	font-size:24px;
+	font-size: 24px;
 }
+
 h2 {
-	font-size:20px;
+	font-size: 20px;
 }
+
 #leftnav {
-	padding:30px 0;
+	padding: 30px 0;
 }
+
 #leftnav li {
-	margin:10px 0;
-	display:block;
+	margin: 10px 0;
+	display: block;
 }
+
 #leftnav a {
-	font-size:16px;
-	font-weight:500;
-	text-transform:uppercase;
-	padding-left:10px;
-	font-family:'Raleway', 'Roboto', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding-left: 10px;
+	font-family: 'Raleway', 'Roboto', Arial, Helvetica, sans-serif;
 }
+
 #companyName h1 {
-	text-transform:uppercase;
+	text-transform: uppercase;
 }
+
 #companyName h1 span {
-	display:block;
+	display: block;
 }
+
 p {
-	color:#000;
-	font-size:14px;
-	line-height:150%;
+	color: #000;
+	font-size: 14px;
+	line-height: 150%;
 }
+
 #leftside {
-	width:200px;
-	height:1500px;
-	position:fixed;
-	float:left;
-	padding:50px 25px;
-	background-color:#000;
-	border-right:1px #fff solid;
+	width: 200px;
+	height: 1500px;
+	position: fixed;
+	float: left;
+	padding: 50px 25px;
+	background-color: #000;
+	border-right: 1px #fff solid;
 }
+
 #leftside h1 {
-	color:#fff;
+	color: #fff;
 }
+
 #leftside p {
-	color:#fff;
+	color: #fff;
 }
+
 #leftnav a:link {
-	color:#fff;
-	border-left:2px #000 solid;
+	color: #fff;
+	border-left: 2px #000 solid;
 }
+
 #leftnav a:hover {
-	color:#04CFE1;
-	border-left:2px #04CFE1 solid;
+	color: #04CFE1;
+	border-left: 2px #04CFE1 solid;
 }
+
+#leftnav a:visited {
+	color: #fff;
+}
+
+#leftnav a:active {
+	color: rgb(230, 43, 214);
+}
+
+#leftnav a:focus {
+	color: #F93;
+}
+
 #footer {
-	margin:4px auto 0px auto;
-	width:900px;
-	
+	margin: 4px auto 0px auto;
+	width: 900px;
 }
+
 #footer p {
-	font-size:12px;
+	font-size: 12px;
 }
+
 #footer-content {
-	float:left;
-	width:1000px;
-	padding:5px 25px;
-	background-color:#04CFE1;
-	
+	float: left;
+	width: 1000px;
+	padding: 5px 25px;
+	background-color: #04CFE1;
 }
+
 .footer {
-	margin-top:10px;
+	margin-top: 10px;
 	position: fixed;
 	left: 252;
 	bottom: 0;
@@ -105,61 +141,102 @@ p {
 	background-color: #04CFE1;
 	color: white;
 	text-align: center;
- }
- img{
-	 float:right; clear: right; 
-	height: 300px; width:300px;}
+}
 
- .dataView {
-float: left;
-border: solid 2px #fff;
-border-radius: 10px;
-margin-left: 15px;
+.cookieStoreItems img {
+	height: 200px;
+	width: 200px;
+	margin-bottom: 5px;
+}
 
-background-color: rgba(22, 207, 22, 0.486);
-margin-bottom: 15px;
- }
- 
+img {
+	float: right;
+	clear: right;
+	height: 300px;
+	width: 300px;
+}
 
- table{
-	 margin: 15px;
-	 padding: 5px 5px;
-	 border: Solid 3px #fff;
-	 width:750px;
-	 height:250px;
-	 border-radius: 10px;
-	 
+.dataView {
+	float: left;
+	border: solid 2px #fff;
+	border-radius: 10px;
+	margin-left: 15px;
+	background-color: rgba(22, 207, 22, 0.486);
+	margin-bottom: 15px;
+}
 
- }
- thead{border:Solid 3px#fff;background-color: rgba(22, 207, 22, 0.863);}
- th{border:Solid 3px#fff; padding: 5px 5px;
- }
- td{background-color: rgba(22, 207, 22, 0.863); border:Solid 3px #fff; padding: 5px 5px; }
+table {
+	margin: 15px;
+	padding: 5px 5px;
+	border: Solid 3px #fff;
+	width: 750px;
+	height: 250px;
+	border-radius: 10px;
+}
 
+thead {
+	border: Solid 3px#fff;
+	background-color: rgba(22, 207, 22, 0.863);
+}
 
-	form {
-		margin: 40px;
-		padding: 5px 5px; 
-		max-width: 780px;
-		background-color: rgba(22, 207, 22, 0.486);
-		border-radius: 10px;
-		
-	  }
+th {
+	border: Solid 3px#fff;
+	padding: 5px 5px;
+}
 
- .allStores{
-	 
-	float:left;
+td {
+	background-color: rgba(22, 207, 22, 0.863);
+	border: Solid 3px #fff;
+	padding: 5px 5px;
+}
+
+form {
+	margin: 40px;
+	padding: 25px 25px;
+	max-width: 780px;
+	background-color: rgba(22, 207, 22, 0.786);
+	border-radius: 10px;
+	height: 100px;
+}
+
+label {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-right: 10px;
+}
+
+input {
+	margin-right: 50px;
+	margin-bottom: 20px;
+}
+
+input[type="submit"] {
+	float: right;
+	margin-top: 5px;
+	margin-right: 15px;
+}
+
+button {
 	margin-left: 100px;
-	 margin-bottom: 25px;}
+	margin-top: 5px;
+	float: right;
+}
 
+.allStores {
+	float: left;
+	margin-left: 100px;
+	margin-bottom: 25px;
+}
 
 .storeHours {
-	
-margin-top: 15px; width:100%;
+	margin-top: 15px;
+	width: 100%;
 }
 
-.storeHours h2, li{
-	color:#fff;
-	margin:10px 0;
-
+.storeHours h2,
+li {
+	color: #fff;
+	margin: 10px 0;
 }
+
