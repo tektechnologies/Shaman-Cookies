@@ -68,12 +68,33 @@
   //dailyHours.className = '';
   //storeLocations.className = '';
 
-  //Append htmls to the main by way of homePage Id
-
+  //Append elements to the main by way of homePage Id
+  //Add an image, h1 and mainContent paragraph
   homePage.appendChild(img);
   homePage.appendChild(h1);
+  homePage.appendChild(mainContent);
+  //Append the adminInfo section to the main element
+  homePage.appendChild(adminInfo);
+  //Append the storeHours section to the adminInfo section.
+  adminInfo.appendChild(storeHours);
+  //Add Hour elements h1 and paragraph
+  storeHours.appendChild(hoursTitle);
+  storeHours.appendChild(dailyHours);
+  //Add Final Section for the Page
+  adminInfo.appendChild(storeLocations);
 
 
-
+  cookieStores.forEach(store => {
+    var storeName = document.createElement('h3');
+    var storeAddress = document.createElement('p');
+    //Add Text Content.
+    storeName.textContent = store.locationName;
+    storeAddress.textContent = store.address;
+    //style for stores
+    //storeName.className = '';
+    //storeAddress.className = '';
+    storeLocations.appendChild(storeName);
+    storeLocations.appendChild(storeAddress);
+  });
 
 }());
