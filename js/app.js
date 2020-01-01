@@ -2,6 +2,13 @@
 //console.log('Hello from App JS!');
 
 //https://stackoverflow.com/questions/8228281/what-is-the-function-construct-in-javascript
+/*The most widely accepted way to tell the parser to expect
+ a function expression is just to wrap it in parens, because 
+ in JavaScript, parens can’t contain statements. 
+ At this point, when the parser encounters the function keyword, 
+ it knows to parse it as a function expression and
+ not a function declaration.
+*/
 
 //The below is an IFFE - 
 // It executes immediately after it’s created.
@@ -40,25 +47,31 @@
     },
   ];
 
-  // Store HTML content and styling.
+  // Store HTML content and styling
+  //Index Page Images
+  img.src = 'images/salmon.png';
+  img.alt = 'Picture of Cookie';
 
-h1.className = 'company-name';
-h1.textContent = 'Shaman Grocer\'s Cookies';
+  // Index Page Text Content 
+  h1.textContent = 'Shaman Grocer\'s Cookies';
+  mainContent.textContent = 'Shaman Grocer\'s Cookies is the thing we call the global market! We combine two of Earth\'s favorite things: Magic and Cookies. Our mission is to deliver fresh and innovative food in a casual and familiar atmosphere. Give us a call at 1-800-SHA-MANN to place your order today!';
+  hoursTitle.textContent = 'Location Hours';
+  dailyHours.textContent = '6am to 10pm Everyday';
 
-img.className = '';
-img.src = 'images/salmon.png';
-img.alt = 'Picture of Cookie';
+  //Index Page Styling 
+  //h1.className = 'company-name';
+  //img.className = '';
+  //mainContent.className = '';
+  //adminInfo.className = '';
+  //storeHours.className = '';
+  //hoursTitle.className = '';
+  //dailyHours.className = '';
+  //storeLocations.className = '';
 
+  //Append htmls to the main by way of homePage Id
 
-
-
-
-
-
-
-
-
-
+  homePage.appendChild(img);
+  homePage.appendChild(h1);
 
 
 
