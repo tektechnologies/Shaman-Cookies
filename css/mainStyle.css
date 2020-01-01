@@ -1,0 +1,11 @@
+/** Home page */
+.company-name {
+    text-align: center;
+    font-size: 22px;
+    margin: 0;
+}
+.fish-picture {
+    display: block;
+    margin: 0 auto;
+    padding-top: 25vh;
+}
