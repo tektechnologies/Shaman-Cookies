@@ -1,0 +1,91 @@
+html,
+body,
+p,
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Base CSS */
+html {
+    font-size:100%;
+}
+body {
+    background-color: #0d8faca6;
+}
+main {
+    min-height: 95vh;
+}
+a  {
+    display: inline-block;
+    padding-left: 20px;
+    font-family: 'Righteous', cursive;
+    clear: right;
+    font-size: 25px;
+    color: #0a5161ee;
+    margin-top: 15px;
+
+}
+/* link */
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+
+/** Home page */
+
+.company-name {
+    text-align: center;
+    font-size: 52px;
+    margin: 0;
+    font-family: 'Monoton', cursive;
+}
+.fish-picture {
+    display: block;
+    margin: 0 auto;
+    padding-top: 5vh;
+    height: 35%;
+    width: 35%;
+}
+.mainContent,
+.adminInfo {
+ /* float:left; */
+}
+.mainContent {
+ font-size: 1.15em;
+ line-height: 30px;
+ margin: 0% 10% 0% 10%;
+ /* text-align: justify; */
+ 
+ /* margin-left: calc((100vw / 12) * 4); */
+ /* margin-top: 5vh; */
+}
+.adminInfo {
+font-size: 1.25em;
+/* text-align: right; */
+}
+.storeHours {
+   background-color: #0bc7f1d9; 
+   border-top: 5px solid#1085c4d9;; 
+}
+.store-hours-title {
+    font-family:  Helvetica, sans-serif;
+    background-color: #1085c49a;
+}
+.dailyHours {
+    font-family: 'Raleway', 'Roboto', Arial, Helvetica, sans-serif;
+}
+.storeLocations {
+    font-family:  Helvetica, sans-serif;
+}
