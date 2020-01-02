@@ -61,13 +61,13 @@
   //Index Page Styles
 
   h1.className = 'company-name';
-  //img.className = '';
-  //mainContent.className = '';
-  //adminInfo.className = '';
-  //storeHours.className = '';
-  //hoursTitle.className = '';
-  //dailyHours.className = '';
-  //storeLocations.className = '';
+  img.className = 'fish-picture';
+  mainContent.className = 'mainContent';
+  adminInfo.className = 'adminInfo';
+  storeHours.className = 'storeHours';
+  hoursTitle.className ='store-hours-title';
+  dailyHours.className = 'dailyHours';
+  storeLocations.className = 'storeLocations';
 
   //Append elements to the main by way of homePage Id
   //Add an image, h1 and mainContent paragraph
