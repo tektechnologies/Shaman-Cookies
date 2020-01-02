@@ -58,8 +58,9 @@
   hoursTitle.textContent = 'Location Hours';
   dailyHours.textContent = '6am to 10pm Everyday';
 
-  //Index Page Styling 
-  //h1.className = 'company-name';
+  //Index Page Styles
+
+  h1.className = 'company-name';
   //img.className = '';
   //mainContent.className = '';
   //adminInfo.className = '';

@@ -1,11 +1,29 @@
+html,
+body,
+p,
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /** Home page */
 .company-name {
     text-align: center;
-    font-size: 22px;
+    font-size: 52px;
     margin: 0;
+    font-family: 'Monoton', cursive;
 }
 .fish-picture {
     display: block;
     margin: 0 auto;
     padding-top: 25vh;
+}
+html {
+    font-size:100%;
+}
+body {
+    background-color: #0d8faca6;
+}
+main {
+    min-height: 95vh;
 }
