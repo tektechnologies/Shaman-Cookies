@@ -17,8 +17,12 @@ function footerHourlyStoreTotals(){
 
 
   for(var i = 0; i < cookiesTotalHour.length; i++){
+    console.log('array totals',cookiesTotalHour);
     var cookiesForThisHour = cookiesTotalHour[i];
+    //////
+    console.log('a',cookiesForThisHour);
     cookieTotal += cookiesForThisHour;
+    console.log('cookies adding up/',cookiesTotalHour[i],cookieTotal);
     var cookieHourlyTotals = document.createElement('td');
     cookieHourlyTotals.textContent = cookiesForThisHour;
     tr.appendChild(cookieHourlyTotals);
@@ -65,6 +69,9 @@ ShamanCookieStores.prototype.numOfCustPerHour = function() {
 
 //Prototype  to string that returns location name and average sales
 ShamanCookieStores.prototype.render = function () {
+
+
+  
   // Let's also count total cookies
   var cookieTotal = 0;
   // Find parent <tbody> for this location by id
@@ -79,9 +86,31 @@ ShamanCookieStores.prototype.render = function () {
 
   // For each hour that the store is open...
   for(var i = 0; i < hours.length; i++){
+
+
+    ////////////from our constructor function array
+    //we access each cookie total at each hour for each store
     var cookiesForThisHour = this.cookiesSold[i];
+    //lays out the totals for each hour in the table
+    console.log('each cookie hr total:',cookiesForThisHour);
+    ///////////////////////////////
+
+    //access our global array and add the cookie total for that hour
     cookiesTotalHour[i] += cookiesForThisHour;
+    console.log('each of our hour totals added to the column total',cookiesTotalHour[i], 'first column adding up: ',cookiesTotalHour[0],'second column adding up: ',cookiesTotalHour[1]);
+
+
     cookieTotal += cookiesForThisHour;
+    console.log('final store total for the day', cookieTotal);
+
+
+
+
+
+
+
+
+
 
     var cookieHourlyData = document.createElement('td');
     cookieHourlyData.textContent = cookiesForThisHour;
@@ -110,7 +139,7 @@ var boulderColo = new ShamanCookieStores(11,38,3.7,'Boulder Colo.');
 var eugeneOregon = new ShamanCookieStores(20,38,2.3,'Eugene Oregon');
 var oxnardCali = new ShamanCookieStores(2, 16, 4.6,'Point Break');
 
-
+console.log(iowaCity,cedarRapids,boulderColo,eugeneOregon,oxnardCali);
 //create list items, create the objects identify html ul elements by id.
 ShamanCookieStores.renderAll();
 
@@ -122,7 +151,7 @@ function handleSubmit(event) {
   var locationName = event.target.locationName.value;
 
   var newStore = new ShamanCookieStores(minCustomers, maxCustomers, averageSales, locationName);
-
+  console.log(newStore);
 
   ShamanCookieStores.renderAll();
 }
