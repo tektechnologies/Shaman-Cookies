@@ -4,7 +4,11 @@ var cookiesTotalHour = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 
 function footerHourlyStoreTotals(){
+
+
   var cookieTotal = 0;
+  // console.log('CT',cookieTotal);
+
   var tFoot = document.getElementById('tableFooter');
   tFoot.innerHTML = '';
   var tr = document.createElement('tr');
@@ -22,7 +26,7 @@ function footerHourlyStoreTotals(){
     //////
     console.log('a',cookiesForThisHour);
     cookieTotal += cookiesForThisHour;
-    console.log('cookies adding up/',cookiesTotalHour[i],cookieTotal);
+    console.log('final cookies total adding up:', 'each hour total',cookiesTotalHour[i], 'final num',cookieTotal);
     var cookieHourlyTotals = document.createElement('td');
     cookieHourlyTotals.textContent = cookiesForThisHour;
     tr.appendChild(cookieHourlyTotals);
