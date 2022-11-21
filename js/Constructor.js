@@ -120,10 +120,16 @@ ShamanCookieStores.prototype.render = function () {
     cookieHourlyData.textContent = cookiesForThisHour;
     tr.appendChild(cookieHourlyData);
   }
+
   var cookieTotals = document.createElement('td');
   cookieTotals.textContent = cookieTotal;
   tr.appendChild(cookieTotals);
+
 };
+
+
+
+
 
 ShamanCookieStores.renderAll = function() {
   // First, empty out the existing customer list
@@ -136,6 +142,13 @@ ShamanCookieStores.renderAll = function() {
   }
   footerHourlyStoreTotals();
 };
+
+
+
+
+
+
+
 
 var iowaCity = new ShamanCookieStores(23,65,6.3,'Iowa City');
 var cedarRapids = new ShamanCookieStores(3,24,1.2,'Cedar Rapids');
